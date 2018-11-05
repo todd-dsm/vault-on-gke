@@ -1,24 +1,26 @@
 variable "region" {
-  type    = "string"
-  default = "us-east4"
+  description = "Build region; REF: https://cloud.google.com/compute/docs/regions-zones/#available"
+  type        = "string"
 }
 
 variable "zone" {
-  type    = "string"
-  default = "us-east4-b"
+  description = "Build zone(s); REF: https://cloud.google.com/compute/docs/regions-zones/#available"
+  type        = "string"
 }
 
 variable "project" {
-  type    = "string"
-  default = ""
+  description = "What's the purpose of this project? Great, now whta's the name?"
+  type        = "string"
 }
 
 variable "billing_account" {
-  type = "string"
+  description = "Billing account for the Organization."
+  type        = "string"
 }
 
 variable "org_id" {
-  type = "string"
+  description = "The Organization ID; run: gcloud organizations list"
+  type        = "string"
 }
 
 variable "instance_type" {
