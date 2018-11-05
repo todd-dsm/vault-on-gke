@@ -9,19 +9,21 @@ variable "zone" {
 }
 
 variable "project" {
-  description = "What's the purpose of this project? Great, now whta's the name?"
-  type        = "string"
+  description = "To get this info: `gcloud config configurations list`"
+  type    = "string"
+  default = ""
 }
 
 variable "billing_account" {
-  description = "Billing account for the Organization."
-  type        = "string"
+  description = "To get this info: `gcloud beta billing accounts list`"
+  type = "string"
 }
 
 variable "org_id" {
-  description = "The Organization ID; run: gcloud organizations list"
-  type        = "string"
+  description = "To get this info: `gcloud organizations list`"
+  type = "string"
 }
+
 
 variable "instance_type" {
   type    = "string"
